@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- TÍTULO -->
+    <TextView
+        android:id="@+id/tituloProblemas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Problemas"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <!-- ÁREA PRINCIPAL -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <!-- TÍTULO DA LISTA -->
+        <TextView
+            android:id="@+id/tituloPrincipaisProblemas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"
+            android:text="Principais Problemas"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <!-- SAÚDE -->
+        <CheckBox
+            android:id="@+id/checkSaude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Saúde"
+            android:textSize="14sp" />
+
+
+        <!-- EDUCAÇÃO -->
+        <CheckBox
+            android:id="@+id/checkEducacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Educação"
+            android:textSize="14sp" />
+
+
+        <!-- TRANSPORTE -->
+        <CheckBox
+            android:id="@+id/checkTransporte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transporte"
+            android:textSize="14sp" />
+
+
+        <!-- VIOLÊNCIA -->
+        <CheckBox
+            android:id="@+id/checkViolencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Violência"
+            android:textSize="14sp" />
+
+
+        <!-- PROBLEMA 5 -->
+        <CheckBox
+            android:id="@+id/checkProblema5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Meio ambiente "
+            android:textSize="14sp" />
+
+
+        <!-- PROBLEMA 6 -->
+        <CheckBox
+            android:id="@+id/checkProblema6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Técnologia "
+            android:textSize="14sp" />
+
+
+        <!-- PROBLEMA 7 -->
+        <CheckBox
+            android:id="@+id/checkProblema7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Arborização"
+            android:textSize="14sp" />
+
+
+        <!-- PROBLEMA 8 -->
+        <CheckBox
+            android:id="@+id/checkProblema8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Econômia"
+            android:textSize="14sp" />
+
+
+        <!-- PROBLEMA 9 -->
+        <CheckBox
+            android:id="@+id/checkProblema9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Natalidade"
+            android:textSize="14sp" />
+
+
+        <!-- ESPAÇO -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <!-- BOTÃO -->
+        <Button
+            android:id="@+id/buttonConfirmarProblemas"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Confirmar"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</LinearLayout>
