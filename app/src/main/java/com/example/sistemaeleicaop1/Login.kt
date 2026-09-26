@@ -41,12 +41,12 @@ class Login : AppCompatActivity() {
             nome = etNome.text.toString()
             senha = etSenha.text.toString()
 
-            if(nome == "Admin" && senha == "1234"){
+            if(nome == "admin" && senha == "1234"){
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
-            else if(nome == "Entrevistador" && senha == "1234"){
-                val intent = Intent(this, MainActivity::class.java)
+            else if(nome == "entrevistador" && senha == "1234"){
+                val intent = Intent(this, Espontanea::class.java)
                 startActivity(intent)
             }
             else{

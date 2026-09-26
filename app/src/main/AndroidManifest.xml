@@ -11,16 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SistemaEleicaoP1">
+
+        <!-- MainActivity agora é uma tela comum -->
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".Eleitores"
             android:exported="false"
@@ -33,10 +30,18 @@
             android:name=".Login"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- Splash configurada como a tela inicial -->
         <activity
             android:name=".Splash"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".Candidatos"
             android:exported="false"
@@ -47,6 +52,10 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Espontanea"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".DadosEntrevistados"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
