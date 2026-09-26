@@ -11,29 +11,35 @@
     tools:context=".Resultado">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvTotalEntrevistados"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quantidade de pessoas entrevistadas:"
+        android:text="Quantidade de pessoas entrevistadas: 0"
         android:textColor="#FFFFFF"
-        android:textSize="24sp" />
+        android:textSize="22sp" />
 
     <TextView
-        android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
         android:text="Quantidade de votos para cada candidato:"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="20dp"/>
+        android:textSize="22sp"
+        android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/textView7"
+    <!-- ScrollView para caso a lista fique muito grande -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Candidato 1:"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_height="match_parent">
+
+        <!-- Contêiner onde o Kotlin vai jogar os resultados -->
+        <LinearLayout
+            android:id="@+id/containerResultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
 </LinearLayout>

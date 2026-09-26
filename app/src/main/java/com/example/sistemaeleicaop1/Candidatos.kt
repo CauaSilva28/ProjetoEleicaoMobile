@@ -9,8 +9,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.sistemaeleicaop1.R
-import com.seudominio.sistemaeleicaop1.Problemas
+import com.example.sistemaeleicaop1.Problemas
 
 class Candidatos : AppCompatActivity() {
     private var votoEstimulado: String = ""
@@ -43,6 +42,12 @@ class Candidatos : AppCompatActivity() {
             if (votoEstimulado.isEmpty()) {
                 Toast.makeText(this, "Por favor, selecione uma opção antes de confirmar.", Toast.LENGTH_SHORT).show()
             } else {
+
+                // ---------------------------------------------------------
+                // REGISTRA O VOTO NA NOSSA VARIÁVEL GLOBAL EM MEMÓRIA
+                DadosGlobais.adicionarVoto(votoEstimulado)
+                // ---------------------------------------------------------
+
                 val votoEspontaneo = intent.getStringExtra("VOTO_ESPONTANEO") ?: ""
 
                 val intent = Intent(this, Problemas::class.java)
@@ -56,7 +61,6 @@ class Candidatos : AppCompatActivity() {
     }
 
     private fun selecionarOpcao(botaoClicado: Button, nomeVoto: String) {
-
         val layoutOpcao = (botaoClicado.parent as View).parent as LinearLayout
 
         layoutSelecionado?.background = null

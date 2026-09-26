@@ -1,4 +1,4 @@
-package com.seudominio.sistemaeleicaop1 // Substitua pelo seu pacote
+package com.example.sistemaeleicaop1 // Substitua pelo seu pacote
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.sistemaeleicaop1.DadosEntrevistados
 import com.example.sistemaeleicaop1.R
 
 class Problemas : AppCompatActivity() {

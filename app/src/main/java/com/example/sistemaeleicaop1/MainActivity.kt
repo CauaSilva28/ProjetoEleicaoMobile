@@ -3,6 +3,7 @@ package com.example.sistemaeleicaop1
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast // Importante: Adicionei o import do Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -34,8 +35,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // LÓGICA DE LIMPEZA DE DADOS ADICIONADA AQUI
         btnLimparDados.setOnClickListener {
+            // 1. Esvazia a lista de pessoas cadastradas
+            DadosGlobais.listaEleitores.clear()
 
+            // 2. Zera a contagem de votos de cada candidato
+            for (candidato in DadosGlobais.contagemVotos.keys) {
+                DadosGlobais.contagemVotos[candidato] = 0
+            }
+
+            // 3. Mostra um aviso na tela para o entrevistador
+            Toast.makeText(this, "Todos os dados foram apagados com sucesso!", Toast.LENGTH_SHORT).show()
         }
 
         btnSair.setOnClickListener {
