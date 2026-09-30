@@ -1,128 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#400A00"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:background="#150000">
 
-    <!-- TÍTULO DA LISTA -->
-    <TextView
-        android:id="@+id/tituloPrincipaisProblemas"
+    <!-- FORMAS GEOMÉTRICAS DE FUNDO -->
+
+    <!-- Forma 1: Triângulo no topo esquerdo -->
+    <View
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:background="#400A00"
+        android:rotation="-45"
+        android:translationX="-80dp"
+        android:translationY="-80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Forma 2: Bloco no canto inferior direito -->
+    <View
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:background="#260400"
+        android:rotation="35"
+        android:translationX="100dp"
+        android:translationY="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:gravity="center"
-        android:text="Principais Problemas"
-        android:textColor="#FFFFFF"
-        android:textSize="26sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <!-- SAÚDE -->
-    <CheckBox
-        android:id="@+id/checkSaude"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Saúde"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:buttonTint="#FFFFFF" />
+        <!-- TÍTULO -->
+        <TextView
+            android:id="@+id/tituloPrincipaisProblemas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:letterSpacing="0.05"
+            android:text="PRINCIPAIS PROBLEMAS"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
-    <!-- EDUCAÇÃO -->
-    <CheckBox
-        android:id="@+id/checkEducacao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Educação"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:buttonTint="#FFFFFF" />
+        <!-- LISTA ROLÁVEL DE OPÇÕES -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
 
-    <!-- TRANSPORTE -->
-    <CheckBox
-        android:id="@+id/checkTransporte"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Transporte"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:buttonTint="#FFFFFF" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
 
-    <!-- VIOLÊNCIA -->
-    <CheckBox
-        android:id="@+id/checkViolencia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Violência"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:buttonTint="#FFFFFF" />
+                <!-- SAÚDE -->
+                <CheckBox
+                    android:id="@+id/checkSaude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Saúde"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:buttonTint="#FFFFFF" />
 
-    <!-- MEIO AMBIENTE -->
-    <CheckBox
-        android:id="@+id/checkMeioAmbiente"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Meio ambiente"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:buttonTint="#FFFFFF" />
+                <!-- EDUCAÇÃO -->
+                <CheckBox
+                    android:id="@+id/checkEducacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Educação"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:buttonTint="#FFFFFF" />
 
-    <!-- TECNOLOGIA -->
-    <CheckBox
-        android:id="@+id/checkTecnologia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tecnologia"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:buttonTint="#FFFFFF" />
+                <!-- TRANSPORTE -->
+                <CheckBox
+                    android:id="@+id/checkTransporte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Transporte"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:buttonTint="#FFFFFF" />
 
-    <!-- ARBORIZAÇÃO -->
-    <CheckBox
-        android:id="@+id/checkArborizacao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Arborização"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:buttonTint="#FFFFFF" />
+                <!-- VIOLÊNCIA -->
+                <CheckBox
+                    android:id="@+id/checkViolencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Violência"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:buttonTint="#FFFFFF" />
 
-    <!-- ECONOMIA -->
-    <CheckBox
-        android:id="@+id/checkEconomia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Economia"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:buttonTint="#FFFFFF" />
+                <!-- MEIO AMBIENTE -->
+                <CheckBox
+                    android:id="@+id/checkMeioAmbiente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Meio ambiente"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:buttonTint="#FFFFFF" />
 
-    <!-- NATALIDADE -->
-    <CheckBox
-        android:id="@+id/checkNatalidade"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Natalidade"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:buttonTint="#FFFFFF" />
+                <!-- TECNOLOGIA -->
+                <CheckBox
+                    android:id="@+id/checkTecnologia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Tecnologia"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:buttonTint="#FFFFFF" />
 
-    <!-- ESPAÇO -->
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+                <!-- ARBORIZAÇÃO -->
+                <CheckBox
+                    android:id="@+id/checkArborizacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Arborização"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:buttonTint="#FFFFFF" />
 
-    <!-- BOTÃO -->
-    <Button
-        android:id="@+id/buttonConfirmarProblemas"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:backgroundTint="#920A00"
-        android:text="Confirmar"
-        android:textAllCaps="false" />
+                <!-- ECONOMIA -->
+                <CheckBox
+                    android:id="@+id/checkEconomia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Economia"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:buttonTint="#FFFFFF" />
 
-</LinearLayout>
+                <!-- NATALIDADE -->
+                <CheckBox
+                    android:id="@+id/checkNatalidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Natalidade"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:buttonTint="#FFFFFF" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- BOTÃO FINAL (Fixo no rodapé) -->
+        <Button
+            android:id="@+id/buttonConfirmarProblemas"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#920A00"
+            android:text="CONFIRMAR PROBLEMAS"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
